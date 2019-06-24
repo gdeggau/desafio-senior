@@ -1,0 +1,71 @@
+//criar cliente POST
+localhost:8080/desafio/clientes
+{
+	"nmCliente":"Rubens",
+	"dsCpf":"78965412385"
+}
+
+//att cliente PUT
+localhost:8080/desafio/clientes/2
+{
+	"nmCliente":"Gustavo Souza",
+	"dsCpf":"78965412385"
+}
+
+//delete cliente DELETE
+localhost:8080/desafio/clientes/3
+
+
+
+//criar fornecedor POST
+localhost:8080/desafio/fornecedores/
+{
+	"nmFornecedor":"Oxia",
+	"dsCnpj":"32196378565247"
+}
+
+//att fornecedor PUT
+localhost:8080/desafio/fornecedores/4
+{
+	"nmFornecedor":"Oxia",
+	"dsCnpj":"98745612396325"
+}
+
+//delete fornecedor DELETE
+localhost:8080/desafio/fornecedores/1
+
+
+
+//criar produto POST
+localhost:8080/desafio/produtos
+{
+	"dsProduto":"GTX 1080",
+	"nrValorCompra":"500",
+	"nrValorVenda":"1500"
+}
+
+//att produto PUT
+localhost:8080/desafio/produtos/1
+{
+	"dsProduto":"Playstation 4 (Promoção)",
+	"nrValorCompra":"500",
+	"nrValorVenda":"1800"
+}
+
+//delete produto DELETE
+localhost:8080/desafio/produtos/6
+
+
+
+//criar pedido POST
+localhost:8080/desafio/pedidos
+{
+	"idCliente":{
+		"idCliente":"1"
+	},
+	"produtos":[
+		{ "idProduto":"1" },
+		{ "idProduto":"3" },
+		{ "idProduto":"2" }
+	]
+}
