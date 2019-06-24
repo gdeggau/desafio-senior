@@ -1,5 +1,7 @@
 package com.senior.desafio.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,10 @@ public class ClienteService {
 	
 	public Cliente findByIdCliente(Long id) {
 		return clienteRepository.findByIdCliente(id);
+	}
+	
+	public List<Cliente> findAll(){
+		return clienteRepository.findAll();
 	}
 
 }

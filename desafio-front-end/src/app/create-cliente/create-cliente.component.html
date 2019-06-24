@@ -1,0 +1,20 @@
+<h3>Cadastrar Cliente</h3>
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" id="nmCliente" required [(ngModel)]="cliente.nmCliente" name="nmCliente">
+        </div>
+
+        <div class="form-group">
+            <label for="name">CPF</label>
+            <input type="text" class="form-control" id="dsCpf" required [(ngModel)]="cliente.dsCpf" name="dsCpf">
+        </div>
+
+        <button type="submit" class="btn btn-success">Cadastrar</button>
+    </form>
+</div>
+
+<div [hidden]="!submitted">
+    <h4>Cliente cadastrado com sucesso!</h4>
+</div>
