@@ -1,8 +1,8 @@
 package com.senior.desafio.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.senior.desafio.model.Cliente;
@@ -26,8 +26,8 @@ public class ClienteService {
 		return clienteRepository.findByIdCliente(id);
 	}
 	
-	public List<Cliente> findAll(){
-		return clienteRepository.findAll();
+	public Page<Cliente> findAll(Pageable pageable){
+		return clienteRepository.findAll(pageable);
 	}
 
 }

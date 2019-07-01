@@ -5,6 +5,7 @@ import javax.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,11 +24,13 @@ public class FornecedorController {
 	@Autowired
 	private FornecedorService fornecedorService;
 	
+	@Secured({"ROLE_ADMIN"})
 	@PostMapping("/fornecedores")
 	public ResponseEntity<Fornecedor> save(@Valid @RequestBody Fornecedor fornecedor){
 		return ResponseEntity.ok().body(fornecedorService.save(fornecedor));
 	}
 	
+	@Secured({"ROLE_ADMIN"})
 	@PutMapping("/fornecedores/{id}")
 	public ResponseEntity<Fornecedor> update(@PathVariable Long id, @Valid @RequestBody Fornecedor fornecedorDetalhes){
 		Fornecedor fornecedor = fornecedorService.findByIdFornecedor(id);
@@ -38,6 +41,7 @@ public class FornecedorController {
 		return ResponseEntity.ok().body(attFornecedor);
 	}
 	
+	@Secured({"ROLE_ADMIN"})
 	@DeleteMapping("/fornecedores/{id}")
 	public ResponseEntity<Fornecedor> delete(@PathVariable Long id) {
 		

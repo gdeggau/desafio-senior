@@ -27,6 +27,10 @@ public class Pedido {
 	
 	@ManyToMany
 	private List<Produto> produtos;
+	
+	public Pedido() {
+		
+	}
 
 	public long getIdPedido() {
 		return idPedido;

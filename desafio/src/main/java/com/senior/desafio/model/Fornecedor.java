@@ -21,6 +21,10 @@ public class Fornecedor {
 	
 	@Column(name="ds_cnpj")
 	private String dsCnpj;
+	
+	public Fornecedor() {
+		
+	}
 
 	public long getIdFornecedor() {
 		return idFornecedor;

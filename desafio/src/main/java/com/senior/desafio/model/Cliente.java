@@ -21,6 +21,10 @@ public class Cliente {
 	
 	@Column(name="ds_cpf")
 	private String dsCpf;
+	
+	public Cliente() {
+		
+	}
 
 	public long getIdCliente() {
 		return idCliente;

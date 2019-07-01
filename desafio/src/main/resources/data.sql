@@ -1,3 +1,6 @@
+--insert into usuarios (nm_usuario, ds_email, ds_senha) values ('Gabriel', 'gabriel@gmail.com', '12345');
+--insert into usuarios (nm_usuario, ds_email, ds_senha) values ('Bruna', 'bruna@gmail.com', '12345');
+
 insert into fornecedores (nm_fornecedor, ds_cnpj) values ('Oderco', '06578924536982');
 insert into fornecedores (nm_fornecedor, ds_cnpj) values ('Hayamax', '63488924633382');
 insert into fornecedores (nm_fornecedor, ds_cnpj) values ('Golden', '56327924656583');

@@ -24,6 +24,10 @@ public class Produto {
 	
 	@Column(name="nr_valor_compra")
 	private double nrValorCompra;
+	
+	public Produto() {
+		
+	}
 
 	public long getIdProduto() {
 		return idProduto;

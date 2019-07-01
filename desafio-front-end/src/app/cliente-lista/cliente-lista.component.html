@@ -15,7 +15,10 @@
               <tr *ngFor="let cliente of clientes | async">
                   <td>{{cliente.nmCliente}}</td>
                   <td>{{cliente.dsCpf}}</td>
-                  <td><button (click)="deleteCliente(cliente.idCliente)">Deletar</button></td>
+                  <td>
+                    <button (click)="deleteCliente(cliente.idCliente)">Deletar</button>
+                    <button (click)="updateCliente(cliente.idCliente)">Atualizar</button>
+                  </td>
               </tr>
           </tbody>
       </table>

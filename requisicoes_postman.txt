@@ -1,3 +1,22 @@
+﻿//gerando o token POST
+localhost:8080/oauth/token
+Authorization
+ Type: Basic Auth
+ Username: client
+ Password: 123
+Body (form-data)
+ grant_type: password
+ username: admin
+ password: 12345
+
+
+A partir do token gerado, utilizar o mesmo para as requisições abaixo.
+
+Authorization
+ Type: Bearer Token
+ Token: token-gerado
+
+
 //criar cliente POST
 localhost:8080/desafio/clientes
 {
@@ -15,6 +34,8 @@ localhost:8080/desafio/clientes/2
 //delete cliente DELETE
 localhost:8080/desafio/clientes/3
 
+//listar clientes GET
+localhost:8080/desafio/clientes?size=5&page=0
 
 
 //criar fornecedor POST
